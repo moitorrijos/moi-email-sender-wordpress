@@ -1,0 +1,27 @@
+{
+  "name": "moi-email-sender",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass sass/ -o css/ --source-map true --output-style expanded --indent-type tab --indent-width 1 -w",
+    "compile:css": "node-sass sass/ -o css/ && stylelint 'css/*.css' --fix || true && stylelint 'css/*.css' --fix",
+    "bundle": "dir-archiver --src . --dest ../moi-email-sender.zip --exclude .DS_Store .stylelintrc.json .eslintrc .git .gitattributes .github .gitignore README.md composer.json composer.lock node_modules vendor package-lock.json package.json .travis.yml phpcs.xml.dist sass style.css.map"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moitorrijos/moi-email-sender-wordpress.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moitorrijos/moi-email-sender-wordpress/issues"
+  },
+  "homepage": "https://github.com/moitorrijos/moi-email-sender-wordpress#readme",
+  "devDependencies": {
+    "dir-archiver": "^1.1.2",
+    "node-sass": "^4.14.1",
+    "stylelint": "^13.7.2"
+  }
+}
