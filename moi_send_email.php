@@ -19,7 +19,7 @@ function moi_sender_send_email() {
   /**
    * Correo extraído de las opciones de correo
    */
-  $to_company = esc_attr( get_option('moi_sender_from_email_address') );
+  $to_company = MOI_EMAIL_SENDER;
   $html_styles = 'style="font-family: sans-serif; font-size: 16px; width: 70ch"';
 
   ob_start();

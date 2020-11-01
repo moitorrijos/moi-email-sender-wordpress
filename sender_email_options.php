@@ -11,15 +11,15 @@ function add_moi_sender_email_options() {
     'Información General Concord Security',
     'Opciones de Correo',
     'manage_options',
-    'opciones-correo',
+    'moi-opciones-correo',
     'moi_sender_email_options',
   );
   add_action( 'admin_init', 'register_moi_sender_email' );
 }
 
 function register_moi_sender_email() {
-  register_setting('moi_sender_email_group', 'moi_sender_from_name');
-  register_setting('moi_sender_email_group', 'moi_sender_from_email_address');
+  register_setting('moi_sender_group', 'moi_sender_from_name');
+  register_setting('moi_sender_group', 'moi_sender_from_email_address');
 }
 
 function moi_sender_email_options() {
@@ -32,7 +32,11 @@ function moi_sender_email_options() {
       <form method="post" action="options.php">
         <table class="form-table">
           <tr valign="top">
-            <th scope="row">Nombre del correo destinatario</th>
+            <th scope="row">
+              <label for="moi_sender_from_name">
+                Nombre del correo destinatario
+              </label>
+            </th>
             <td>
               <input
                 type="text"
@@ -40,6 +44,7 @@ function moi_sender_email_options() {
                 id="moi_sender_from_name"
                 value="<?php echo esc_attr( get_option('moi_sender_from_name') ); ?>"
                 class="regular-text"
+                required
               >
               <p class="description">
                 Nombre del correo que debe aparecer como destinatario.
@@ -47,7 +52,11 @@ function moi_sender_email_options() {
             </td>
           </tr>
           <tr valign="top">
-            <th scope="row">Correo Electrónico del destinatario</th>
+            <th scope="row">
+              <label form="moi_sender_from_email_address">
+                Correo Electrónico del destinatario
+              </label>
+            </th>
             <td>
               <input
                 type="text"
@@ -55,6 +64,7 @@ function moi_sender_email_options() {
                 id="moi_sender_from_email_address"
                 value="<?php echo esc_attr( get_option('moi_sender_from_email_address') ); ?>"
                 class="regular-text"
+                required
               >
               <p class="description">
                 Nombre del correo electrónico sin el nombre de dominio.
