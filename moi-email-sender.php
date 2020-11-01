@@ -3,7 +3,7 @@
 Plugin Name:  Moi Sender Email
 Plugin URI:   https://github.com/moitorrijos/moi-email-sender-wordpress
 Description:  An email sender for WordPress.
-Version:      0.4
+Version:      0.5
 Author:       Juan Moises Torrijos
 Author URI:   https://moitorrijos.com/
 Text Domain:  moiemailsender

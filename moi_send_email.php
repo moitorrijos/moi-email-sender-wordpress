@@ -58,7 +58,7 @@ function moi_sender_send_email() {
   <h1 <?php echo $html_styles; ?>>Hola <?php echo "$tu_nombre $tu_apellido"; ?>,</h1>
   <p <?php echo $html_styles; ?>>
     Gracias por contactarnos a través de de nuestro formulario.
-    Un agente de venta se contactará contigo muy pronto.
+    Un agente de venta se contactará con usted muy pronto.
     Su consulta es muy importante para nosotros.
   </p>
   <p <?php echo $html_styles; ?>>Atentamente,</p>
