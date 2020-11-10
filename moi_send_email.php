@@ -5,6 +5,11 @@ add_action( 'wp_ajax_nopriv_moi_sender_contact_form', 'moi_sender_send_email' );
 
 function moi_sender_send_email() {
   /**
+   * Verifica el nonce
+   */
+  $nonce = $_POST['ccs_nonce'];
+  if ( !wp_verify_nonce( $nonce, 'ccs_nonce' ) ) exit;
+  /**
    * Campos recibidos de formData.
    */
   $tu_nombre = $_POST['tu-nombre'];
@@ -19,7 +24,7 @@ function moi_sender_send_email() {
   /**
    * Correo extraído de las opciones de correo
    */
-  $to_company = MOI_EMAIL_SENDER;
+  $to_company = MOI_EMAIL_SENDER . MOI_EMAIL_SENDER_DOMAIN;
   $html_styles = 'style="font-family: sans-serif; font-size: 16px; width: 70ch"';
 
   ob_start();

@@ -13,6 +13,7 @@ Domain Path:  languages
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
 define( 'MOI_EMAIL_SENDER', 'ventas@' );
+define( 'MOI_EMAIL_SENDER_DOMAIN', 'concordsecurity.com.pa' );
 define( 'MOI_NAME_SENDER', 'Concord Security' );
 
 // include( plugin_dir_path( __FILE__ ) . 'sender_email_options.php' );
